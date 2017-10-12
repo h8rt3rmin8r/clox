@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <title>CLOCK</title>
-  <!-- ****** META CONFIGURATIONS ****** -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="description" content="A simple internet clock">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="productivity, to-do, clock app, clock online">
+    <title>CLOCK</title>
+    <!-- ****** META CONFIGURATIONS ****** -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="A simple internet clock">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="productivity, to-do, clock app, clock online">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="https://resonova.github.io/clox/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://resonova.github.io/clox/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://resonova.github.io/clox/images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="https://resonova.github.io/clox/images/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="https://resonova.github.io/clox/images/apple-icon-76x76.png">
@@ -43,87 +43,84 @@
     <meta name="msapplication-TileImage" content="https://resonova.github.io/clox/images/ms-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-<link rel="shortcut icon" href="https://resonova.github.io/clox/images/favicon.png">
+    <link rel="shortcut icon" href="https://resonova.github.io/clox/images/favicon.png">
 
-  <!-- ****** STYLE ****** -->
-  <link rel="stylesheet" href="http://apt-get.co/to-do/bootstrap.min.css">
-  <style type="text/css">
-    .center-block {
-      padding: 10px;
-    }
+    <!-- ****** STYLE ****** -->
+    <link rel="stylesheet" href="http://apt-get.co/to-do/bootstrap.min.css">
+    <style type="text/css">
+        .center-block {
+            padding: 10px;
+        }
 
-    h1 {
-      font-size: 300%;
-    }
+        h1 {
+            font-size: 300%;
+        }
 
-    h2 {
-      font-size: 250%;
-    }
+        h2 {
+            font-size: 250%;
+        }
 
-    p {
-      font-size: 120%;
-    }
-  </style>
+        p {
+            font-size: 120%;
+        }
+    </style>
 
-  <!-- ****** SCRIPT ****** -->
-  <script>
-    function startTime() {
-      var today = new Date();
-      var h = today.getHours();
-      var m = today.getMinutes();
-      var s = today.getSeconds();
-      m = checkTimeA(m);
-      s = checkTimeA(s);
-      h = checkTimeB(h)
-      document.getElementById('clock').innerHTML =
-        h + ":" + m + ":" + s;
-      var t = setTimeout(startTime, 500);
-    }
+    <!-- ****** SCRIPT ****** -->
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTimeA(m);
+            s = checkTimeA(s);
+            h = checkTimeB(h)
+            document.getElementById('clock').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
 
-    function checkTimeA(i) {
-      if (i < 10) {
-        i = "0" + i
-      }; // add zero in front of numbers < 10
-      return i;
-    }
-    function checkTimeB(j) {
-      if (j < 10) {
-        j = "0" + j
-      }; // add zero in front of numbers < 10
-      return j;
-    }
-  </script>
+        function checkTimeA(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+
+        function checkTimeB(j) {
+            if (j < 10) {
+                j = "0" + j
+            }; // add zero in front of numbers < 10
+            return j;
+        }
+    </script>
 
 </head>
 
 <body class="text-white bg-dark" onload="startTime()">
-  <div class="container d-flex justify-content-center">
-    <div class="row">
-      <div class="center-block"><div class="card text-center bg-dark mb-3" style="min-height: 150px">
-        <div class="card-header text-center text-white bg-dark">LOCAL TIME</div>
-        <div class="card-body">
-          <h2 class="card-title">
-            <div id="clock"></div></h2>
-        </div></div>
-      </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="center-block">
+                <div class="card text-center mb-3" style="min-height: 150px">
+                    <div class="card-header text-center">LOCAL TIME</div>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <div id="clock"></div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <footer class="footer d-flex justify-content-center">
-    <div class="container">
-      <span class="text-white">© 2017
-        <a href="https://www.resonova.com">ResoNova.com </a>
-      </span>
-    </div>
-  </footer>
 
-  <!-- Bootstrap scripts added at the end to improve site performance -->
-  <script src="http://apt-get.co/to-do/slim.min.js"></script>
-  <script src="http://apt-get.co/to-do/popper.min.js"></script>
-  <script src="http://apt-get.co/to-do/bootstrap.min.js"></script>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <!-- Bootstrap scripts added at the end to improve site performance -->
+    <script src="http://apt-get.co/to-do/slim.min.js"></script>
+    <script src="http://apt-get.co/to-do/popper.min.js"></script>
+    <script src="http://apt-get.co/to-do/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
