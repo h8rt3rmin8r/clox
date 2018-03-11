@@ -170,12 +170,6 @@ $(document).ready(function() {
 // Create two variable with the names of the months and days in an array
 var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
 var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-var newYork    = moment.tz("2018-03-11 17:40", "America/New_York");
-var losAngeles = newYork.clone().tz("America/Los_Angeles");
-var london     = newYork.clone().tz("Europe/London");
-newYork.format();    // 2014-06-01T12:00:00-04:00
-losAngeles.format(); // 2014-06-01T09:00:00-07:00
-london.format();     // 2014-06-01T17:00:00+01:00
 // Create a newDate() object
 var newDate = new Date();
 // Extract the current date from Date object
@@ -205,6 +199,13 @@ setInterval( function() {
     }, 1000);
 	
 }); 
+	
+var newYork    = moment.tz("2018-03-11 17:40", "America/New_York");
+var losAngeles = newYork.clone().tz("America/Los_Angeles");
+var london     = newYork.clone().tz("Europe/London");
+newYork.format();    // 2014-06-01T12:00:00-04:00
+losAngeles.format(); // 2014-06-01T09:00:00-07:00
+london.format();     // 2014-06-01T17:00:00+01:00
 </script>
 <link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/jquery/CSS3-digital-clock/index.html" />
 </head>
