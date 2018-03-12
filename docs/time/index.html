@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CLOCK</title>
+    
+    <!-- ****** META CONFIGURATIONS ****** -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="A simple internet clock">
+    <meta name="keywords" content="productivity, to-do, clock app, clock online">
+
+    <!-- ****** WEBSITE FAVICONS ****** -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://resonova.github.io/clox/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://resonova.github.io/clox/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://resonova.github.io/clox/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://resonova.github.io/clox/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://resonova.github.io/clox/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://resonova.github.io/clox/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://resonova.github.io/clox/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://resonova.github.io/clox/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://resonova.github.io/clox/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://resonova.github.io/clox/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://resonova.github.io/clox/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://resonova.github.io/clox/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://resonova.github.io/clox/images/favicon-16x16.png">
+    <link rel="manifest" href="https://resonova.github.io/clox/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://resonova.github.io/clox/images/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://resonova.github.io/clox/images/android-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Clox">
+    <link rel="apple-touch-icon-precomposed" href="https://resonova.github.io/clox/images/apple-icon-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="https://resonova.github.io/clox/images/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <link rel="shortcut icon" href="https://resonova.github.io/clox/images/favicon.png">
+
+    <!-- STYLESHEETS -->
+    <style type="text/css">
+        .center-block {
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 300%;
+        }
+
+        h2 {
+            font-size: 250%;
+        }
+
+        p {
+            font-size: 120%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/iframe-grid.css">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/clox.css">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/animate.css">
+
+    <!-- FONT SELECTIONS -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/fa.css" type="text/css">
+
+    <!-- HEAD SCRIPTS -->
+    <script data-require="jquery@*" data-semver="3.3.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- ****** SCRIPT ****** -->
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTimeA(m);
+            s = checkTimeA(s);
+            h = checkTimeB(h)
+            document.getElementById('clock').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTimeA(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+
+        function checkTimeB(j) {
+            if (j < 10) {
+                j = "0" + j
+            }; // add zero in front of numbers < 10
+            return j;
+        }
+    </script>
+
+</head>
+
+<body onload="startTime()">
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="center-block">
+                <div class="card text-center mb-3" style="min-height: 150px">
+                    <div class="card-header text-center">LOCAL TIME</div>
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <div id="clock"></div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SITE SCRIPTS -->
+    <!-- iframe-grid -->
+    <script src="https://resonova.github.io/cdn/js/iframe-grid.js"></script>
+    <!-- json2html -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+    <!-- Bootstrap 4.0.0-beta.2 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <!-- popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
