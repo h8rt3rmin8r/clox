@@ -242,7 +242,7 @@ a {
 
 #loader {
     position: relative;
-    z-index: 1;
+    z-index: 99;
     width: 80px;
     height: 80px;
     display: -webkit-flex;
@@ -261,6 +261,7 @@ a {
 
 #loaderDiv {
     padding-top: 250px;
+    z-index: 98;
 }
 
 @-webkit-keyframes spin {
