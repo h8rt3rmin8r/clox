@@ -84,31 +84,33 @@
 	</script>
 	<!-- Conclude the animated div content and insert script to act on that div  -->
 	<script>
-			var myVar;
-	
-			function myFunction() {
-				myVar = setTimeout(showPage, 2000);
-			}
-	
-			function showPage() {
-				document.getElementById("loader").style.display = "none";
-				document.getElementById("loaderDiv").style.display = "none";
-				document.getElementById("myDiv").style.display = "block";
-			}
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 2000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("loaderDiv").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
 	</script>
 
 	<style>
 		/* Center the loader and define appearance */
 
 		#loader {
-			position: absolute;
+			position: relative;
 			z-index: 1;
 			width: 80px;
 			height: 80px;
-			display: -webkit-flex; /* Safari */
-    		-webkit-justify-content: center; /* Safari 6.1+ */
-    		display: flex;
-    		justify-content: center;
+			display: -webkit-flex;
+			/* Safari */
+			-webkit-justify-content: center;
+			/* Safari 6.1+ */
+			display: flex;
+			justify-content: center;
 			border: 2px solid transparant;
 			border-radius: 50%;
 			border-top: 16px solid #367d39;
@@ -177,7 +179,7 @@
 <!-- Initiate "loader" and "animate-bottom" to page content -->
 
 <body id="" onload="myFunction()">
-	<div id="loaderDiv" class="container d-flex justify-content-center">
+	<div id="loaderDiv" class="container justify-content-center">
 		<div id="loader"></div>
 	</div>
 	<div style="display:none;" id="myDiv" class="animate-bottom">
@@ -185,9 +187,7 @@
 		<!-- Website Jumbotron Starts -->
 		<div class="header">
 			<div class="container">
-				<h3>
-					<b>CLOX</b>
-				</h3>
+				<h3 class="display-4">CLOX</h3>
 				<p class="lead">Live time tools created by
 					<a href="https://resonova.com">ResoNova</a>
 				</p>
@@ -198,7 +198,7 @@
 		<div class="container">
 			<div class="wrapper">
 				<br>
-				<h2 class="white">CHOOSE YOUR CLOCK</h2>
+				<h2>CHOOSE YOUR CLOCK</h2>
 				<hr>
 				<br>
 
@@ -242,23 +242,23 @@
 			</div>
 
 		</div>
-	<!-- </div> -->
+	</div>
 
-	<!-- SITE SCRIPTS -->
-	
-	<!-- json2html -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
-	<!-- Bootstrap 4.0.0-beta.2 -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-	    crossorigin="anonymous"></script>
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	    crossorigin="anonymous"></script>
-	<!-- popper -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-		crossorigin="anonymous"></script>
-	
+		<!-- SITE SCRIPTS -->
+
+		<!-- json2html -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+		<!-- Bootstrap 4.0.0-beta.2 -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+		    crossorigin="anonymous"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		    crossorigin="anonymous"></script>
+		<!-- popper -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+		    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
