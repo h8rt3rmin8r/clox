@@ -1,249 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>CLOX</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="description" content="Full-screen popout clocks">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="popout clocks, digital clock, popout html">
-	<base href="https://resonova.github.io/clox/" target="_blank">
+	<base href="https://clox.io/" target="_blank">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto|Ubuntu" rel="stylesheet">
-		
-    <link rel="apple-touch-icon" sizes="57x57" href="https://resonova.github.io/clox/images/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="https://resonova.github.io/clox/images/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="https://resonova.github.io/clox/images/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="https://resonova.github.io/clox/images/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="https://resonova.github.io/clox/images/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="https://resonova.github.io/clox/images/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="https://resonova.github.io/clox/images/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="https://resonova.github.io/clox/images/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://resonova.github.io/clox/images/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://resonova.github.io/clox/images/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://resonova.github.io/clox/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://resonova.github.io/clox/images/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://resonova.github.io/clox/images/favicon-16x16.png">
-    <link rel="manifest" href="https://resonova.github.io/clox/images/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="https://resonova.github.io/clox/images/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="https://resonova.github.io/clox/images/android-icon-192x192.png">
+	<!-- FAVICONS -->
+	<link rel="apple-touch-icon" sizes="57x57" href="https://clox.io/images/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="https://clox.io/images/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="https://clox.io/images/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://clox.io/images/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="https://clox.io/images/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://clox.io/images/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="https://clox.io/images/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://clox.io/images/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://clox.io/images/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="https://clox.io/images/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://clox.io/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://clox.io/images/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://clox.io/images/favicon-16x16.png">
+	<link rel="manifest" href="https://clox.io/images/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="https://clox.io/images/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Add to homescreen for Chrome on Android -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" sizes="192x192" href="https://clox.io/images/android-icon-192x192.png">
+	<!-- Add to homescreen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Material Design Lite">
+	<link rel="apple-touch-icon-precomposed" href="https://clox.io/images/apple-icon-precomposed.png">
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<meta name="msapplication-TileImage" content="https://clox.io/images/ms-icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#3372DF">
+	<link rel="shortcut icon" href="https://clox.io/images/favicon.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="https://resonova.github.io/clox/images/apple-icon-precomposed.png">
+	<!-- STYLES -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	    crossorigin="anonymous">
+	<link rel="stylesheet" href="https://resonova.github.io/cdn/css/clox.css">
+	<link rel="stylesheet" href="https://resonova.github.io/cdn/css/animate.css">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="https://resonova.github.io/clox/images/ms-icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+	<!-- FONT SELECTIONS -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="https://resonova.github.io/cdn/css/fa.css" type="text/css">
 
-    <link rel="shortcut icon" href="https://resonova.github.io/clox/images/favicon.png">
-	<script data-require="jquery@*" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-		</script>
-    <script>
-        function checklength(i) {
-        'use strict';
-        if (i < 10) {
-        i = "0" + i;
-        }
-        return i;
-        }
-
-        var minutes, seconds, count, counter, timer;
-        count = 601; //seconds
-        counter = setInterval(timer, 1000);
-
-        function timer() {
-        'use strict';
-        count = count - 1;
-        minutes = checklength(Math.floor(count / 60));
-        seconds = checklength(count - minutes * 60);
-        if (count < 0) {
-        clearInterval(counter);
-        return;
-        }
-        document.getElementById("timer").innerHTML = 'Next refresh in ' + minutes + ':' + seconds + ' ';
-        if (count === 0) {
-        location.reload();
-        }
-        }
-    	</script>
-		
-		<style>
-			* {box-sizing: border-box;}
-				.header {background-color:black; color: #000000; padding: 15px;}
-      				.footer {background-color:black; color: #000000; padding: 15px; font-color: #ffffff;}
-				.column {float: left; padding: 15px;}
-				.clearfix::after {content: ""; clear: both; display: table;}
-				.menu {width: 28%; font-family: 'Didact Gothic', sans-serif;}
-				.content {width: 60%;}
-				.white {color: white;}
-                		.dark {color:black;}
-				.menu ul {list-style-type: none; margin: 0; padding: 0;}
-				.menu li {
-          			border: none;
-          			color: #ffffff;
-          			padding: 8px 8px;
-          			margin: 8px; 
-          			width: 95%;
-    				font-size: 16px;
-    				cursor: pointer;
-    				box-sizing: border-box;
-      				box-shadow: 2px 3px 4px #000000;
-          			background-color: #f44336; 
-          			text-align: center;
-          			}
-				.menu li:hover {background-color: #da190b;}
-			body{
-                background-color:black;
-            }	
-			h1 {
-				font-family: "Roboto";
-				margin: 10px;
-			}
-			h2 {
-				font-family: "Roboto";
-				margin: 10px;
-			}
-			h3 {
-				font-family: "Roboto";
-				margin: 10px;
-			}
-			h4 {
-				font-family: "Roboto";
-				margin: 20px;
-			}
-			p {
-				font-family: "Roboto";
-			}
-			.btn {
-    			border: none;
-    			color: #ffffff;
-    			padding: 8px 8px;
-			margin: 10px;
-          		max-width: 50%;
-          		min-width: 180px;
-    			font-size: 12px;
-    			cursor: pointer;
-    			box-sizing: border-box;
-      			box-shadow: 2px 3px 4px #000000;
-				}
-					.success {background-color: #4CAF50;} /* Green */
-					.success:hover {background-color: #2f6a31;}
-					.info {background-color: #2196F3;} /* Blue */
-					.info:hover {background: #0b7dda;}
-          				.warning {background-color: #ff9800;} /* Orange */
-					.warning:hover {background: #e68a00;}
-					.danger {background-color: #f44336;} /* Red */ 
-					.danger:hover {background: #da190b;}
-					.default {background-color: #e7e7e7; color: "black";} /* Gray */ 
-					.default:hover {background: #ddd;}
-
-/* Center the loader and define appearance */	
-	#loader {
-  		position: relative;
-		left: 48%;
-  		z-index: 1;
-  		width: 100px;
-  		height: 100px;
-  		margin-top: 20%;
-        margin-bottom: 30%;
-  		border: 2px solid transparant;
-  		border-radius: 50%;
-  		border-top: 16px solid #367d39;
-  		border-bottom: 16px solid #367d39;
-  		-webkit-animation: spin 2s linear infinite;
-  		animation: spin 1s linear infinite;
-		}
-	@-webkit-keyframes spin {
-  		0% { -webkit-transform: rotate(0deg); }
-  		100% { -webkit-transform: rotate(360deg); }
-		}
-	@keyframes spin {
-  		0% { transform: rotate(0deg); }
-  		100% { transform: rotate(360deg); }
-		}
-	/* Add animation to "page content" */
-		
-	.animate-bottom {
-  		position: relative;
-  		-webkit-animation-name: animatebottom;
-  		-webkit-animation-duration: 1s;
-  		animation-name: animatebottom;
-  		animation-duration: 1s
-		}
-	@-webkit-keyframes animatebottom {
-  		from { bottom:-80px; opacity:0 } 
-  		to { bottom:0px; opacity:1 }
-		}
-	@keyframes animatebottom { 
-  		from{ bottom:-100px; opacity:0 } 
-  		to{ bottom:0; opacity:1 }
-		}
-	#myDiv {
-  		display: none;
-  		text-align: left;
-		}
-        
-	</style>
-	</head>
-	
-<!-- Initiate "loader" and "animate-bottom" to page content -->
-
-	<body id="" onload="myFunction()" style="margin:0;">
-	<div id="loader"></div>
-	<div style="display:none;" id="myDiv" class="animate-bottom">
-	
-	<div class="header">
-	
-	<h1 class="white">CLOX</h1>
-	<input class="btn info" type="button" onclick="location.href='https://github.com/resonova/clox/';" value="($) ¯\_(ツ)_/¯ (฿)">
-
-	<p class="white">POPOUT WINDOW CLOCKS</p>
-	</div>
-	<br>
-<h2 class="white">CHOOSE YOUR CLOCK</h2>
-<hr>
-<br>
-
-<p><button class="btn danger" onclick="redFunction()">RED CLOCK</button>
-<script>
-		function redFunction() {
-    		var x = document.doctype.name;
-    		window.open("https://resonova.github.io/clox/r.html", "_blank","width=960,height=385,resizable");
-		}
-	</script></p>
-	<p><button class="btn success" onclick="greenFunction()">GREEN CLOCK</button>
+	<!-- HEAD SCRIPTS -->
+	<script data-require="jquery@*" data-semver="3.3.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		function greenFunction() {
-    		var x = document.doctype.name;
-    		window.open("https://resonova.github.io/clox/g.html", "_blank","width=960,height=385,resizable");
+		function checklength(i) {
+			'use strict';
+			if (i < 10) {
+				i = "0" + i;
+			}
+			return i;
 		}
-	</script></p>
-    <br>
-	<br>
-	
-<div class="footer" >
-        	<p class="p2"><i>think outside the box</i></p>
-        	
-		</div>
-	
-<!-- Conclude the animated div content and insert script to act on that div  -->
-<script>
-	var myVar;
-	function myFunction() {
-	    myVar = setTimeout(showPage, 2000);
-		}
-	function showPage() {
-	  document.getElementById("loader").style.display = "none";
-	  document.getElementById("myDiv").style.display = "block";
+
+		var minutes, seconds, count, counter, timer;
+		count = 601; //seconds
+		counter = setInterval(timer, 1000);
+
+		function timer() {
+			'use strict';
+			count = count - 1;
+			minutes = checklength(Math.floor(count / 60));
+			seconds = checklength(count - minutes * 60);
+			if (count < 0) {
+				clearInterval(counter);
+				return;
+			}
+			document.getElementById("timer").innerHTML = 'Next refresh in ' + minutes + ':' + seconds + ' ';
+			if (count === 0) {
+				location.reload();
+			}
 		}
 	</script>
-	
-	</body>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.header {
+			background-color: black;
+			color: #000000;
+			padding: 15px;
+		}
+
+		.footer {
+			background-color: black;
+			color: #ffffff;
+			padding: 15px;
+		}
+
+		.column {
+			float: left;
+			padding: 15px;
+		}
+
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		.menu {
+			width: 28%;
+			font-family: 'Didact Gothic', sans-serif;
+		}
+
+		.content {
+			width: 60%;
+		}
+
+		.white {
+			color: white;
+		}
+
+		.dark {
+			color: black;
+		}
+
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu li {
+			border: none;
+			color: #ffffff;
+			padding: 8px 8px;
+			margin: 8px;
+			width: 95%;
+			font-size: 16px;
+			cursor: pointer;
+			box-sizing: border-box;
+			box-shadow: 2px 3px 4px #000000;
+			background-color: #f44336;
+			text-align: center;
+		}
+
+		.menu li:hover {
+			background-color: #da190b;
+		}
+
+		body {
+			background-color: black;
+		}
+
+		h1 {
+			font-family: "Roboto";
+			margin: 10px;
+		}
+
+		h2 {
+			font-family: "Roboto";
+			margin: 10px;
+		}
+
+		h3 {
+			font-family: "Roboto";
+			margin: 10px;
+		}
+
+		h4 {
+			font-family: "Roboto";
+			margin: 20px;
+		}
+
+		p {
+			font-family: "Roboto";
+		}
+
+		.btn {
+			border: none;
+			color: #ffffff;
+			padding: 8px 8px;
+			margin: 10px;
+			max-width: 50%;
+			min-width: 180px;
+			font-size: 12px;
+			cursor: pointer;
+			box-sizing: border-box;
+			box-shadow: 2px 3px 4px #000000;
+		}
+
+		.success {
+			background-color: #4CAF50;
+		}
+
+		/* Green */
+
+		.success:hover {
+			background-color: #2f6a31;
+		}
+
+		.info {
+			background-color: #2196F3;
+		}
+
+		/* Blue */
+
+		.info:hover {
+			background: #0b7dda;
+		}
+
+		.warning {
+			background-color: #ff9800;
+		}
+
+		/* Orange */
+
+		.warning:hover {
+			background: #e68a00;
+		}
+
+		.danger {
+			background-color: #f44336;
+		}
+
+		/* Red */
+
+		.danger:hover {
+			background: #da190b;
+		}
+
+		.default {
+			background-color: #e7e7e7;
+			color: "black";
+		}
+
+		/* Gray */
+
+		.default:hover {
+			background: #ddd;
+		}
+
+		/* Center the loader and define appearance */
+
+		#loader {
+			position: relative;
+			left: 48%;
+			z-index: 1;
+			width: 80px;
+			height: 80px;
+			margin-top: 20%;
+			margin-bottom: 30%;
+			border: 2px solid transparant;
+			border-radius: 50%;
+			border-top: 16px solid #367d39;
+			border-bottom: 16px solid #367d39;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 1s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		/* Add animation to "page content" */
+
+		.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 1s;
+			animation-name: animatebottom;
+			animation-duration: 1s
+		}
+
+		@-webkit-keyframes animatebottom {
+			from {
+				bottom: -80px;
+				opacity: 0
+			}
+			to {
+				bottom: 0px;
+				opacity: 1
+			}
+		}
+
+		@keyframes animatebottom {
+			from {
+				bottom: -100px;
+				opacity: 0
+			}
+			to {
+				bottom: 0;
+				opacity: 1
+			}
+		}
+
+		#myDiv {
+			display: none;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<!-- Initiate "loader" and "animate-bottom" to page content -->
+
+<body id="" onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
+
+		<!-- Website Jumbotron Starts -->
+		<div class="header">
+			<div class="container">
+				<h3>
+					<b>CLOX</b>
+				</h3>
+				<p class="lead">Live time tools created by
+					<a href="https://resonova.com">ResoNova</a>
+				</p>
+				<input class="btn info" type="button" onclick="location.href='https://github.com/resonova/clox/';" value="VIEW ON GITHUB">
+			</div>
+		</div>
+		<!-- jumbotron stops -->
+		<div class="container">
+			<div class="wrapper">
+				<br>
+				<h2 class="white">CHOOSE YOUR CLOCK</h2>
+				<hr>
+				<br>
+
+				<p>
+					<button class="btn danger" onclick="redFunction()">RED CLOCK</button>
+					<script>
+						function redFunction() {
+							var x = document.doctype.name;
+							window.open("https://clox.io/r/", "_blank", "width=960,height=385,resizable");
+						}
+					</script>
+				</p>
+				<p>
+					<button class="btn success" onclick="greenFunction()">GREEN CLOCK</button>
+					<script>
+						function greenFunction() {
+							var x = document.doctype.name;
+							window.open("https://clox.io/g/", "_blank", "width=960,height=385,resizable");
+						}
+					</script>
+				</p>
+				<p>
+					<button class="btn warning" onclick="gridFunction()">CLOX GRID</button>
+					<script>
+						function gridFunction() {
+							var x = document.doctype.name;
+							window.open("https://clox.io/grid/", "_blank", "width=960,height=385,resizable");
+						}
+					</script>
+				</p>
+			</div>
+		</div>
+		<br>
+		<br>
+
+		<div class="footer">
+			<p class="p2">
+				<i>think outside the box</i>
+			</p>
+
+		</div>
+	</div>
+
+	<!-- Conclude the animated div content and insert script to act on that div  -->
+	<script>
+		var myVar;
+
+		function myFunction() {
+			myVar = setTimeout(showPage, 2000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
+
+</body>
+
 </html>
