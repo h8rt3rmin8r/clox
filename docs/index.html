@@ -87,7 +87,7 @@
 		/* Center the loader and define appearance */
 
 		#loader {
-			position: absolute;
+			position: relative;
 			z-index: 1;
 			width: 80px;
 			height: 80px;
@@ -215,13 +215,17 @@
 		<br>
 
 		<div class="footer">
-			<p class="p2">
-				<i>think outside the box</i>
-			</p>
+			<div class="container">
+				<p class="p2">
+					<i>think outside the box</i>
+				</p>
+			</div>
 
 		</div>
 	</div>
 
+
+	<!-- SITE SCRIPTS -->
 	<!-- Conclude the animated div content and insert script to act on that div  -->
 	<script>
 		var myVar;
@@ -235,7 +239,18 @@
 			document.getElementById("myDiv").style.display = "block";
 		}
 	</script>
-
+	<!-- json2html -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
+	<!-- Bootstrap 4.0.0-beta.2 -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	    crossorigin="anonymous"></script>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	    crossorigin="anonymous"></script>
+	<!-- popper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	    crossorigin="anonymous"></script>
 </body>
 
 </html>
