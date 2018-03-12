@@ -253,10 +253,10 @@ a {
     justify-content: center;
     border: 2px solid transparant;
     border-radius: 50%;
-    border-top: 16px solid green;
-    border-bottom: 16px solid green;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 1s linear infinite;
+    border-top: 16px solid black;
+    border-bottom: 16px solid black;
+    -webkit-animation: spin 1.3s linear infinite;
+    animation: spin 0.8s linear infinite;
 }
 
 #loaderDiv {
