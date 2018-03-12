@@ -158,9 +158,9 @@
 
 <!-- Initiate "loader" and "animate-bottom" to page content -->
 
-<body id="" onload="myFunction()" style="margin:0;">
+<body id="myDiv" onload="myFunction()" style="margin:0; display:none;" class="animate-bottom">
 	<div class="container d-flex justify-content-center" id="loader"></div>
-	<div style="display:none;" id="myDiv" class="animate-bottom">
+	<!-- <div style="display:none;" id="myDiv" class="animate-bottom"> -->
 
 		<!-- Website Jumbotron Starts -->
 		<div class="header">
@@ -222,8 +222,7 @@
 			</div>
 
 		</div>
-	</div>
-
+	<!-- </div> -->
 
 	<!-- SITE SCRIPTS -->
 	<!-- json2html -->
@@ -238,6 +237,8 @@
 	<!-- popper -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
 		crossorigin="anonymous"></script>
+	
+</body>
 	<!-- Conclude the animated div content and insert script to act on that div  -->
 	<script>
 		var myVar;
@@ -251,6 +252,4 @@
 			document.getElementById("myDiv").style.display = "block";
 		}
 	</script>
-</body>
-
 </html>
