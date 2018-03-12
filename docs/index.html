@@ -54,34 +54,6 @@
 
 	<!-- HEAD SCRIPTS -->
 	<script data-require="jquery@*" data-semver="3.3.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		function checklength(i) {
-			'use strict';
-			if (i < 10) {
-				i = "0" + i;
-			}
-			return i;
-		}
-
-		var minutes, seconds, count, counter, timer;
-		count = 601; //seconds
-		counter = setInterval(timer, 1000);
-
-		function timer() {
-			'use strict';
-			count = count - 1;
-			minutes = checklength(Math.floor(count / 60));
-			seconds = checklength(count - minutes * 60);
-			if (count < 0) {
-				clearInterval(counter);
-				return;
-			}
-			document.getElementById("timer").innerHTML = 'Next refresh in ' + minutes + ':' + seconds + ' ';
-			if (count === 0) {
-				location.reload();
-			}
-		}
-	</script>
 	<!-- Conclude the animated div content and insert script to act on that div  -->
 	<script>
 		var myVar;
@@ -178,9 +150,6 @@
 		    crossorigin="anonymous"></script>
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		    crossorigin="anonymous"></script>
-		<!-- popper -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
 		    crossorigin="anonymous"></script>
 
 </body>
