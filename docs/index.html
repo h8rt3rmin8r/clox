@@ -82,6 +82,20 @@
 			}
 		}
 	</script>
+	<!-- Conclude the animated div content and insert script to act on that div  -->
+	<script>
+			var myVar;
+	
+			function myFunction() {
+				myVar = setTimeout(showPage, 2000);
+			}
+	
+			function showPage() {
+				document.getElementById("loader").style.display = "none";
+				document.getElementById("loaderDiv").style.display = "none";
+				document.getElementById("myDiv").style.display = "block";
+			}
+	</script>
 
 	<style>
 		/* Center the loader and define appearance */
@@ -91,6 +105,10 @@
 			z-index: 1;
 			width: 80px;
 			height: 80px;
+			display: -webkit-flex; /* Safari */
+    		-webkit-justify-content: center; /* Safari 6.1+ */
+    		display: flex;
+    		justify-content: center;
 			border: 2px solid transparant;
 			border-radius: 50%;
 			border-top: 16px solid #367d39;
@@ -158,9 +176,11 @@
 
 <!-- Initiate "loader" and "animate-bottom" to page content -->
 
-<body id="myDiv" onload="myFunction()" style="margin:0; display:none;" class="animate-bottom">
-	<div class="container d-flex justify-content-center" id="loader"></div>
-	<!-- <div style="display:none;" id="myDiv" class="animate-bottom"> -->
+<body id="" onload="myFunction()">
+	<div id="loaderDiv" class="container d-flex justify-content-center">
+		<div id="loader"></div>
+	</div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">
 
 		<!-- Website Jumbotron Starts -->
 		<div class="header">
@@ -225,6 +245,7 @@
 	<!-- </div> -->
 
 	<!-- SITE SCRIPTS -->
+	
 	<!-- json2html -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.json2html/1.2.0/jquery.json2html.min.js"></script>
@@ -239,17 +260,5 @@
 		crossorigin="anonymous"></script>
 	
 </body>
-	<!-- Conclude the animated div content and insert script to act on that div  -->
-	<script>
-		var myVar;
 
-		function myFunction() {
-			myVar = setTimeout(showPage, 2000);
-		}
-
-		function showPage() {
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("myDiv").style.display = "block";
-		}
-	</script>
 </html>
