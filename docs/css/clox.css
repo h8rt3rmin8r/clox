@@ -146,7 +146,13 @@ button {
 .footer {
     background-color: #001800de;
     color: green;
-    padding-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Sticky Footer (set the fixed height of the footer here) */
+    height: 60px;
+    /* Sticky Footer (vertically center the text there) */
+    line-height: 60px;
 }
 
 .column {
@@ -206,6 +212,8 @@ button {
 
 body {
     background-color: black;
+    /* Sticky Footer: (margin bottom by footer height) */
+    margin-bottom: 60px;
 }
 
 h1 {
