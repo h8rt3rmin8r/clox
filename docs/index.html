@@ -54,40 +54,11 @@
 
 	<!-- HEAD SCRIPTS -->
 	<script data-require="jquery@*" data-semver="3.3.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<!-- Conclude the animated div content and insert script to act on that div  -->
-	<script>
-		var myVar;
 
-		function myFunction() {
-			myVar = setTimeout(showPage, 1300);
-		}
-
-		function showPage() {
-			document.getElementById("loader").style.display = "none";
-			document.getElementById("loaderDiv").style.display = "none";
-			document.getElementById("myDiv").style.display = "block";
-		}
-	</script>
 </head>
 
-<!-- Initiate "loader" and "animate-bottom" to page content -->
-
-<body id="" onload="myFunction()">
-
-	<div id="loaderDiv" class="container d-flex justify-content-center">
-		<div id="loaderDiv" class="row">
-			<div id="loaderDiv" class="center-block">
-				<div id="loaderDiv" class="text-center mb-3">
-					<br>
-					<br>
-					<div id="loader" class="justify-content-center"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div style="display:none;" id="myDiv" class="animate-bottom">
-
-		<!-- Website Jumbotron Starts -->
+<body>
+	<!-- Website Jumbotron Starts -->
 		<div class="header">
 			<div class="container">
 				<h3 class="display-4">CLOX</h3>
